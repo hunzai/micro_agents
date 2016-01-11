@@ -12,13 +12,30 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class  Action {
 
     private  WebDriver webDriver = null;
+    private int timeout = 2;
+
+    public int getTimeout() {
+        return timeout;
+    }
+
+    public void setTimeout(int timeout) {
+        this.timeout = timeout;
+    }
+
+    public WebDriver getWebDriver() {
+        return webDriver;
+    }
+
+    public void setWebDriver(WebDriver webDriver) {
+        this.webDriver = webDriver;
+    }
 
     public Action(WebDriver webDriver){
         this.webDriver = webDriver;
     }
 
     public void click(String xpath){
-        wait(xpath, 2);
+        wait(xpath, this.timeout);
         find(xpath).click();
     }
 
@@ -30,9 +47,14 @@ public class  Action {
         find(xpath).sendKeys(text);
     }
 
-    public String getElement(String xpath){
+    public WebElement getElement(String xpath){
         WebElement element = find(xpath);
-        return element.getText();
+        return element;
+    }
+
+    public String getResultHtml(String xpath){
+        WebElement element = find(xpath);
+        return element.getAttribute("innerHTML");
     }
 
     public void openBrowser(String url){

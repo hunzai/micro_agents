@@ -1,9 +1,12 @@
-package com;
+package com.agent;
+
+import com.Action;
+import com.Task;
 
 /**
  * Created by asaleem on 09.01.16.
  */
-public class FaceBook implements Task {
+public class DeleteFaceBookPage implements Task {
     String faceBook = "https://www.facebook.com/";
     String userName = "";
     String password = "";
@@ -17,10 +20,7 @@ public class FaceBook implements Task {
 
     String gulgulingPeopleAndLinksUserSettingRemoveXPath = "//*[@id='u_0_k']/div/ul/li[2]";
     String gulgulingPeopleAndLinksUserSettingRemoveConfirmXPath = "//*[@id='u_1w_1']/div[3]/button";
-//*[@id="js_9"]/div
-//*[@id="u_jsonp_3_8"]/div/ul/li[2]
-//*[@id="js_9"]/div
-//*[@id="u_0_k"]/div/ul/li[2]
+
     public void perform(Action action) {
         action.openBrowser(faceBook);
         action.type(userXpath, userName);
@@ -32,6 +32,6 @@ public class FaceBook implements Task {
         action.click(gulgulingPeopleAndLinksUserSettingXPath);
         action.click(gulgulingPeopleAndLinksUserSettingRemoveXPath);
         action.click(gulgulingPeopleAndLinksUserSettingRemoveConfirmXPath);
-       // action.closeBrowser();
+        action.closeBrowser();
     }
 }
