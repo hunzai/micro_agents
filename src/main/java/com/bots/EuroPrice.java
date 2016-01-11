@@ -1,4 +1,4 @@
-package com.agent;
+package com.bots;
 
 import com.Action;
 import com.Task;
@@ -12,9 +12,9 @@ import java.util.logging.Logger;
 public class EuroPrice implements Task {
     String url = "https://www.google.de";
     String searchBoxXpath = "//*[@id='lst-ib']";
-    String resultsXpath = "//*[@id=\"topstuff\"]";  //*[@id="rso"]/li[1]/div/div[2] //*[@id="rso"]/li[1]/div
+    String resultsXpath = "//*[@id=\"topstuff\"]";
 
-    private  Logger logger = Logger.getLogger("com.agent.EuroPrice");
+    private  Logger logger = Logger.getLogger("com.bots.EuroPrice");
 
     public void perform(Action action) {
         action.openBrowser(url);

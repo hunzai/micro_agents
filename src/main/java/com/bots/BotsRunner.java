@@ -1,4 +1,4 @@
-package com.agent;
+package com.bots;
 
 import com.Action;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ import java.io.IOException;
 /**
  * Created by asaleem on 09.01.16.
  */
-public class Bot {
+public class BotsRunner {
 
     public static void main(String[] args) throws IOException {
         WebDriver webDriver = new FirefoxDriver();
