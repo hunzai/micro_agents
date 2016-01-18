@@ -2,12 +2,12 @@ package com.bots;
 
 import com.IAction;
 import com.IResultProcessor;
-import com.ITask;
+import com.IMission;
 
 /**
  * Created by asaleem on 09.01.16.
  */
-public class DeleteFaceBookPage implements ITask {
+public class DeleteFaceBookPage implements IMission {
     String faceBook = "https://www.facebook.com/";
     String userName = "";
     String password = "";

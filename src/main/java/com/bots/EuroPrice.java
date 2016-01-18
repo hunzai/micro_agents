@@ -2,7 +2,7 @@ package com.bots;
 
 import com.IAction;
 import com.IResultProcessor;
-import com.ITask;
+import com.IMission;
 import org.openqa.selenium.WebElement;
 
 import java.util.logging.Logger;
@@ -10,7 +10,7 @@ import java.util.logging.Logger;
 /**
  * Created by asaleem on 08.01.16.
  */
-public class EuroPrice implements ITask {
+public class EuroPrice implements IMission {
     String url = "https://www.google.de";
     String searchBoxXpath = "//*[@id='lst-ib']";
     String resultsXpath = "//*[@id=\"topstuff\"]";
