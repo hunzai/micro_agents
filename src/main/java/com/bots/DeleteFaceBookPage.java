@@ -1,12 +1,13 @@
 package com.bots;
 
-import com.Action;
-import com.Task;
+import com.IAction;
+import com.IResultProcessor;
+import com.ITask;
 
 /**
  * Created by asaleem on 09.01.16.
  */
-public class DeleteFaceBookPage implements Task {
+public class DeleteFaceBookPage implements ITask {
     String faceBook = "https://www.facebook.com/";
     String userName = "";
     String password = "";
@@ -21,7 +22,7 @@ public class DeleteFaceBookPage implements Task {
     String gulgulingPeopleAndLinksUserSettingRemoveXPath = "//*[@id='u_0_k']/div/ul/li[2]";
     String gulgulingPeopleAndLinksUserSettingRemoveConfirmXPath = "//*[@id='u_1w_1']/div[3]/button";
 
-    public void perform(Action action) {
+    public void perform(IAction action, IResultProcessor processor) {
         action.openBrowser(faceBook);
         action.type(userXpath, userName);
         action.type(passwordXpath, password);

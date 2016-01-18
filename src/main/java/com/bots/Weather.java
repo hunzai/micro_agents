@@ -1,13 +1,14 @@
 package com.bots;
 
-import com.Action;
-import com.Task;
+import com.IAction;
+import com.IResultProcessor;
+import com.ITask;
 
 /**
  * Created by asaleem on 11.01.16.
  */
-public class Weather implements Task {
-    public void perform(Action action) {
+public class Weather implements ITask {
+    public void perform(IAction action, IResultProcessor processor) {
 
     }
 }

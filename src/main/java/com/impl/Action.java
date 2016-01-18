@@ -1,5 +1,6 @@
-package com;
+package com.impl;
 
+import com.IAction;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -9,26 +10,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 /**
  * Created by asaleem on 08.01.16.
  */
-public class  Action {
+public class  Action implements IAction {
 
     private  WebDriver webDriver = null;
     private int timeout = 2;
 
-    public int getTimeout() {
-        return timeout;
-    }
-
-    public void setTimeout(int timeout) {
-        this.timeout = timeout;
-    }
-
-    public WebDriver getWebDriver() {
-        return webDriver;
-    }
-
-    public void setWebDriver(WebDriver webDriver) {
-        this.webDriver = webDriver;
-    }
 
     public Action(WebDriver webDriver){
         this.webDriver = webDriver;
@@ -52,11 +38,6 @@ public class  Action {
         return element;
     }
 
-    public String getResultHtml(String xpath){
-        WebElement element = find(xpath);
-        return element.getAttribute("innerHTML");
-    }
-
     public void openBrowser(String url){
       this.webDriver.get(url);
     }
@@ -70,13 +51,7 @@ public class  Action {
 
     }
 
-    public void clickOnAlert(String xpath){
-        this.webDriver.switchTo().alert();
-        find(xpath).click();
-    }
-
-
-    private WebElement find(String xpath){
+    public WebElement find(String xpath){
        return this.webDriver.findElement(By.xpath(xpath));
     }
 }

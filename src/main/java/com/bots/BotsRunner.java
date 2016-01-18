@@ -1,6 +1,9 @@
 package com.bots;
 
-import com.Action;
+import com.IAction;
+import com.IResultProcessor;
+import com.impl.Action;
+import com.impl.GoogleSearchResultProcessor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
@@ -14,8 +17,10 @@ public class BotsRunner {
     public static void main(String[] args) throws IOException {
         WebDriver webDriver = new FirefoxDriver();
         EuroPrice manager = new EuroPrice();
-        Action action = new Action(webDriver);
-        manager.perform(action);
+        IAction  action = new Action(webDriver);
+        IResultProcessor processor = new GoogleSearchResultProcessor();
+
+        manager.perform(action, processor );
 
     }
 }
