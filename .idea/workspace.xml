@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7ad3beca-899c-4afb-b523-3e7584d7e742" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/ITask.java" afterPath="$PROJECT_DIR$/src/main/java/com/IMission.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bots/DeleteFaceBookPage.java" afterPath="$PROJECT_DIR$/src/main/java/com/bots/DeleteFaceBookPage.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bots/EuroPrice.java" afterPath="$PROJECT_DIR$/src/main/java/com/bots/EuroPrice.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/bots/Weather.java" afterPath="$PROJECT_DIR$/src/main/java/com/bots/Weather.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="micro_agents.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -108,8 +103,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.04482072">
-              <caret line="3" column="124" selection-start-line="3" selection-start-column="124" selection-end-line="3" selection-end-column="124" />
+            <state vertical-scroll-proportion="0.059760958">
+              <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -843,12 +838,12 @@
       <option name="number" value="Default" />
       <updated>1452548594925</updated>
       <workItem from="1452548596289" duration="2781000" />
-      <workItem from="1453131030156" duration="1472000" />
+      <workItem from="1453131030156" duration="1606000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4253000" />
+    <option name="totallyTimeSpent" value="4387000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1857" y="23" width="1857" height="1177" extended-state="6" />
@@ -1095,8 +1090,8 @@
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.04482072">
-          <caret line="3" column="124" selection-start-line="3" selection-start-column="124" selection-end-line="3" selection-end-column="124" />
+        <state vertical-scroll-proportion="0.059760958">
+          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="12" />
           <folding />
         </state>
       </provider>
