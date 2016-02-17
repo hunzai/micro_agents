@@ -22,19 +22,19 @@ public class  Action implements IAction {
 
     public void click(String xpath){
         wait(xpath, this.timeout);
-        find(xpath).click();
+        findXPath(xpath).click();
     }
 
     public void submit(String xpath){
-        find(xpath).submit();
+        findXPath(xpath).submit();
     }
 
     public void type(String xpath, String text ){
-        find(xpath).sendKeys(text);
+        findXPath(xpath).sendKeys(text);
     }
 
     public WebElement getElement(String xpath){
-        WebElement element = find(xpath);
+        WebElement element = findXPath(xpath);
         return element;
     }
 
@@ -48,10 +48,12 @@ public class  Action implements IAction {
 
     public void closeBrowser(){
         this.webDriver.close();
-
     }
 
-    public WebElement find(String xpath){
+    public WebElement findXPath(String xpath){
        return this.webDriver.findElement(By.xpath(xpath));
+    }
+    public WebElement findById(String id){
+        return this.webDriver.findElement(By.id(id));
     }
 }

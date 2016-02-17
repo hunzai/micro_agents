@@ -12,5 +12,6 @@ public interface IAction {
     void openBrowser(String url);
     void wait(String xpath, int sec);
     void closeBrowser();
-    WebElement find(String xpath);
+    WebElement findXPath(String xpath);
+    WebElement findById(String id);
 }
