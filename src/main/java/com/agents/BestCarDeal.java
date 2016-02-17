@@ -32,8 +32,8 @@ public class BestCarDeal implements IAgent{
             WebElement priceAndAddress = adItem.findElement(By.className(priceAndAddressElemenetClass));
             WebElement sinceWhenElement = adItem.findElement(By.className(adSinceClass));
 
-              WebElement mainInfoElement = adItem.findElement(By.className(mainInfo));
-              WebElement kmAndYearElement = mainInfoElement.findElement(By.className(kmAndYearClass));
+            WebElement mainInfoElement = adItem.findElement(By.className(mainInfo));
+            WebElement kmAndYearElement = mainInfoElement.findElement(By.className(kmAndYearClass));
 
             WebElement link = mainInfoElement.findElement(By.className("text-module-begin")).findElement(By.tagName("a"));
 

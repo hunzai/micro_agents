@@ -6,33 +6,39 @@ import com.IHtmlProcessor;
 import com.impl.Action;
 import com.impl.HtmlProcessor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
-import org.openqa.selenium.phantomjs.PhantomJSDriverService;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.io.IOException;
 import java.util.Timer;
 import java.util.TimerTask;
+import java.util.logging.Logger;
 
 /**
  * Created by asaleem on 09.01.16.
  */
 public class CommandCenter extends TimerTask {
 
-    public static void main(String[] args) throws IOException {
-        Timer timer = new Timer();
-        timer.scheduleAtFixedRate(new CommandCenter(), 1, 3000);
+    private String phantomjsPath = "/Users/asaleem/projects/micro_agents/lib/phantomjs-2.1.1-macosx/bin/phantomjs";
+    Logger logger = Logger.getLogger("CommandCenter");
+    DesiredCapabilities capabilities = new DesiredCapabilities();
+
+    public CommandCenter(String phantomjsPath){
+        capabilities.setCapability("phantomjs.binary.path",  phantomjsPath);
     }
-    // this method performs the task
+
+    public static void main(String[] args) throws IOException {
+        String phantomjsPath = System.getenv("PHANTOMJS");
+        Timer timer = new Timer();
+        timer.scheduleAtFixedRate(new CommandCenter(phantomjsPath),100, 1);
+    }
+
     public void run() {
-        //WebDriver webDriver = new FirefoxDriver();
-        DesiredCapabilities capabilities = new DesiredCapabilities();
-        capabilities.setCapability("phantomjs.binary.path", "/Users/asaleem/projects/micro_agents/lib/phantomjs-2.1.1-macosx/bin/phantomjs");
         WebDriver driver = new PhantomJSDriver(capabilities);
 
         IAgent agent  = new BestCarDeal();
         IAction  action = new Action(driver);
+
         IHtmlProcessor processor = new HtmlProcessor();
         agent.perform(action, processor);
     }
